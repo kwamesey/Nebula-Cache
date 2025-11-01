@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  nebulacache:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: ["python", "-m", "cache.cli", "--nodes", "3"]
